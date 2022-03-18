@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Login } from "./Component/Login/Login";
+import { Admindash } from "./Component/Admin/Admindash";
+import { useLocalStorage } from "./Hooks/useStorage"
 
 function App() {
+  const [userId,setUserId] = useLocalStorage('userId',"");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     {userId ? <Admindash/>: <Login login = {()=>setUserId('123')}/> }
+    
+  </>
   );
 }
 

@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat",sans-serif!important;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+    font-weight: 400;
+    color: #fa4547;
+    text-align: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.mainarea{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+.inventory{
+    flex-grow: 1;
+}
+.admin-main{
+    width: 220px;
+    margin-top: 42px;
+    min-height: 100vh;
+    background-color: #fff;
+}
+.sidebarItemWrapper {
+    width: 100%;
+    display: flex;
+    margin-bottom: 8px;
+}
