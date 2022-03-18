@@ -1,14 +1,21 @@
 import React from "react";
-import { Login } from "./Component/Login/Login";
 import { Admindash } from "./Component/Admin/Admindash";
+import {LoginPage} from './Pages/LoginPage';
 import { useLocalStorage } from "./Hooks/useStorage"
 
 function App() {
-  const [userId,setUserId] = useLocalStorage('userId',"");
+  const [user, setuser] = useState(false);
+
+  useEffect(() => {
+    const userData = localStorage.getItem('userPassword');
+    if(userData.length !== 0){
+      setuser(true)
+    }
+  }, [])
+  
   return (
     <>
-     {userId ? <Admindash/>: <Login login = {()=>setUserId('123')}/> }
-    
+     {user ? <Admindash/>: <LoginPage/> }  
   </>
   );
 }

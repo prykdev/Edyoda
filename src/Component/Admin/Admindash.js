@@ -1,5 +1,6 @@
 import React from "react";
 import { Header } from "../Header/Header";
+import SideNav from "../SideNav/SideNav";
 import "./Admin.css";
 
 export const Admindash = () => {
@@ -7,6 +8,7 @@ export const Admindash = () => {
     <div className="container">
       <Header show />
       <div className="mainarea">
+        <SideNav/>
         <div className="admin-main">
           <div id="1" class="sidebarItemWrapper">
             <span class="sidebarBorder sidebarActiveBorder"></span>
